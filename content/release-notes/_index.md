@@ -1,6 +1,7 @@
 ---
 title: "Release Notes"
 weight: 50
+type: "release-notes"
 ---
 
 Stay up to date with the latest changes in HoneyBear Folio.
