@@ -3,8 +3,6 @@ title: "First Steps"
 weight: 20
 ---
 
-# First Run Setup
-
 When you launch HoneyBear Folio for the first time, the **Onboarding Wizard** will appear to help you customize your experience:
 
 1.  **Theme Preference**: Toggle between Dark, Light, or System styling.

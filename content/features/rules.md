@@ -4,8 +4,6 @@ weight: 20
 description: "Automate your transaction categorization with powerful rules."
 ---
 
-# Creating Rules
-
 Transaction rules allow you to automate the process of organizing your finances. By defining criteria, you can automatically categorize transactions, update payees, or add notes as soon as data enters the system.
 
 ## How Rules Work
