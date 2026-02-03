@@ -4,8 +4,6 @@ weight: 10
 description: "Learn how to import transactions from other sources and export your data for backup or analysis."
 ---
 
-# Importing and Exporting Data
-
 HoneyBear Folio is designed to be interoperable. You can bring your existing data with you and take your data out at any time.
 
 ## Importing Data

@@ -3,8 +3,6 @@ title: "Installation"
 weight: 10
 ---
 
-# Installation
-
 ## 🐧 Linux
 
 We offer several package formats to suit your distribution.
