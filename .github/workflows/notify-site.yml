@@ -1,0 +1,17 @@
+name: Notify Main Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Site Update
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository: honeybearfolio/honeybearfolio.github.io
+          event-type: docs-updated
