@@ -1,6 +1,7 @@
 ---
 title: "Contributing"
 weight: 30
+description: "How to contribute to HoneyBear Folio."
 ---
 
 # Contributing to HoneyBear Folio

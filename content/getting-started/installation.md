@@ -1,6 +1,7 @@
 ---
 title: "Installation"
 weight: 10
+description: "How to install HoneyBear Folio."
 ---
 
 ## 🐧 Linux
