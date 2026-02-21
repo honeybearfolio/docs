@@ -1,6 +1,7 @@
 ---
 title: "FAQ"
 weight: 40
+description: "Frequently Asked Questions about HoneyBear Folio."
 ---
 
 # Frequently Asked Questions
