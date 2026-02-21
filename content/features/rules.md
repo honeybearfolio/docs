@@ -37,6 +37,7 @@ For text fields (like Payee, Category, Notes), you can use:
 - **Equals** / **Not Equals**: Exact match.
 - **Contains** / **Not Contains**: Partial match.
 - **Starts With** / **Ends With**: Matches the beginning or end of the text.
+- **Matches Regex** / **Doesn't Match Regex**: Match using a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions) pattern (e.g., `^Coffee.*Shop$`). Matching is case-insensitive. If the pattern is invalid, the condition will simply not match.
 - **Is Empty** / **Is Not Empty**: Checks for presence of data.
 
 #### Number Operators
@@ -66,3 +67,33 @@ When a rule matches, you can automatically update the transaction. You can set:
 2. **Action**: Set **Category** To "Dining Out"
 
 With this rule, every time you import a transaction containing "Starbucks", it will automatically be categorized.
+
+### Using Regex
+
+**Scenario**: You want to match multiple coffee shops at once.
+
+1. **Condition**: If **Payee** *Matches Regex* `^(Starbucks|Dunkin|Peet's).*`
+2. **Action**: Set **Category** To "Coffee"
+
+This single rule catches transactions from Starbucks, Dunkin, or Peet's regardless of what follows the name (e.g., "Starbucks #12345" or "Dunkin Donuts - Main St").
+
+### Regex Quick Reference
+
+| Symbol   | Meaning                               | Example      | Matches                       |
+|----------|---------------------------------------|--------------|-------------------------------|
+| `.`      | Any single character                  | `S.op`       | "Shop", "Stop"                |
+| `*`      | Zero or more of the previous          | `go*d`       | "gd", "god", "good"           |
+| `+`      | One or more of the previous           | `go+d`       | "god", "good" (not "gd")      |
+| `?`      | Zero or one of the previous           | `colou?r`    | "color", "colour"             |
+| `^`      | Start of text                         | `^Star`      | "Starbucks" (not "Five Star") |
+| `$`      | End of text                           | `Corp$`      | "Acme Corp" (not "Corp Inc")  |
+| `\d`     | Any digit (0–9)                       | `#\d+`       | "#123", "#7"                |
+| `\w`     | Any word character (letter, digit, _) | `\w+`        | "hello", "test_1"             |
+| `\s`     | Any whitespace                        | `Main\sSt`   | "Main St"                     |
+| `[abc]`  | Any one of a, b, or c                 | `[CB]ost`    | "Cost", "Bost"                |
+| `[^abc]` | Any character except a, b, or c       | `[^0-9]+`    | "abc" (no digits)             |
+| `(A\|B)` | A or B                                | `(Visa\|MC)` | "Visa", "MC"                  |
+| `{n}`    | Exactly n repetitions                 | `\d{4}`      | "2025"                        |
+| `{n,m}`  | Between n and m repetitions           | `\d{2,4}`    | "12", "123", "1234"           |
+
+All regex matching is **case-insensitive**, so `starbucks` will match "Starbucks", "STARBUCKS", etc.
