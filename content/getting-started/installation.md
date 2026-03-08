@@ -4,7 +4,7 @@ weight: 10
 description: "How to install HoneyBear Folio."
 ---
 
-## 🐧 Linux
+## Linux
 
 We offer several package formats to suit your distribution.
 
@@ -38,7 +38,7 @@ For Debian/Ubuntu or Fedora/RHEL based systems.
 
 ---
 
-## 🪟 Windows
+## Windows
 
 1.  Download the installer (`HoneyBear-Folio_x.x.x_x64-setup.exe` or `.msi`) from the [Releases page](https://github.com/HoneyBearFolio/HoneyBear-Folio/releases).
 2.  Run the installer.
@@ -50,7 +50,7 @@ Because HoneyBear Folio is an open-source project and may not be code-signed wit
 
 ---
 
-## 🍎 macOS
+## macOS
 
 1.  Download the `.dmg` disk image.
 2.  Open it and drag "HoneyBear Folio" into your **Applications** folder.
@@ -63,7 +63,7 @@ On the first launch, macOS may block the app because it wasn't downloaded from t
 
 ---
 
-## 🛠 Building from Source
+## Building from Source
 
 If you prefer to compile the application yourself (e.g., for Arch Linux or development), you will need **Bun** and **Rust**.
 
