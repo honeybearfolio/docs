@@ -68,6 +68,7 @@ You can export your data for backup purposes or for further analysis in other to
 - **JSON (`.json`)**: Best for full backups and interoperability.
 - **CSV (`.csv`)**: Best for importing into spreadsheet software like Google Sheets or Excel.
 - **Excel (`.xlsx`)**: Generates a native Excel file with multiple sheets.
+- **PDF (`.pdf`)**: Generates a formatted report of your transactions and accounts.
 
 ### Export Details
 
@@ -84,3 +85,6 @@ The CSV export generates a flat list of transactions with the following columns:
 The Excel export creates a specific `.xlsx` file containing two sheets:
 1. **Transactions**: The list of all your transactions.
 2. **Accounts**: A list of your account definitions.
+
+#### PDF Export
+The PDF export generates a formatted, print-ready report of your data, providing a clean overview of your accounts and transactions.
