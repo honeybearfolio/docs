@@ -14,6 +14,7 @@ Thank you for your interest in contributing to HoneyBear Folio! We welcome bug r
 2.  **Suggest Enhancements**: Propose new features or UX improvements. Describe the user goal and any constraints.
 3.  **Improve Documentation**: Help us improve the README, user guides, or this documentation site.
 4.  **Submit Pull Requests**: Fix bugs, refactor code, or add new features.
+5.  **Financial Contribution**: Support the project by buying me a coffee: [https://buymeacoffee.com/bernatbc](https://buymeacoffee.com/bernatbc)
 
 ## Development Setup
 
