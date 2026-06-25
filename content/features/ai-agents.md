@@ -39,6 +39,9 @@ The assistant can inspect your stored finance data and answer questions about it
 - Scheduled transactions
 - Rules
 - Exchange rates
+- Asset tracking
+- Investment portfolios
+- Net worth
 
 Typical questions include:
 
@@ -46,6 +49,9 @@ Typical questions include:
 - "Which payees appear most often?"
 - "Do I have any scheduled transactions due soon?"
 - "What rules are currently configured?"
+- "What is my current net worth?"
+- "How is my investment portfolio performing?"
+- "What are my tracked assets worth?"
 
 Responses can include tool call badges so you can see which internal data source was used. Some models also support a reasoning block, which HoneyBear Folio can display inline.
 
@@ -68,6 +74,5 @@ The assistant is intentionally scoped.
 - It does not edit your data for you.
 - It only works after Ollama is reachable.
 - It only sees the tools wired into the app, not every screen or database table.
-- Asset tracking data is not currently exposed to the assistant.
 
 If you want the best results, ask focused questions and mention a time range, account, category, or payee when relevant.

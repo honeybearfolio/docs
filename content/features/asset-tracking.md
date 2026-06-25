@@ -47,13 +47,3 @@ You can create, edit, and delete valuations. The latest valuation is shown in th
 Asset values can be converted into your selected app currency when HoneyBear Folio calculates totals. This lets you keep assets in their original currency while still viewing a combined net worth.
 
 If your assets use multiple currencies, make sure your exchange rates are configured in the app. Without matching rates, converted totals may be incomplete or inaccurate.
-
-## Current Limits
-
-Asset tracking is intentionally simple.
-
-- There is no bulk import for assets.
-- Assets are maintained manually through the UI.
-- The AI assistant does not currently query asset data.
-
-Despite that narrow scope, the feature is useful for keeping non-portfolio assets visible in the same application as your accounts and transactions.
