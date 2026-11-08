@@ -22,7 +22,7 @@ HoneyBear-Folio supports multiple languages for its user interface. You can help
    - Translate all values, keeping the keys unchanged.
 
 2. **Register the Language**
-   - Edit `AVAILABLE_LANGUAGES` in `app/src/i18n/i18n.js` to add your language:
+   - Edit `AVAILABLE_LANGUAGES` in `app/src/i18n/i18n.ts` to add your language:
      ```js
      export const AVAILABLE_LANGUAGES = [
        { code: "en", label: "English" },

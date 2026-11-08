@@ -30,17 +30,19 @@ The Ollama URL must be a plain `http://` or `https://` base URL. URLs with authe
 
 ## What the Assistant Can Do
 
-The assistant can inspect your stored finance data and answer questions about it in natural language. Today it has read-only access to:
+The assistant can look up your stored finance data and answer questions about it. It has read-only access to:
 
 - Accounts
 - Transactions
+- Holdings
+- Assets
+- Liabilities
+- Goals
 - Categories
 - Payees
 - Scheduled transactions
 - Rules
 - Exchange rates
-- Asset tracking
-- Investment portfolios
 - Net worth
 
 Typical questions include:

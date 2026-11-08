@@ -22,7 +22,7 @@ HoneyBear Folio supports importing files in the following formats:
 
 1. Open the **Import** modal (usually found in the Sidebar or Settings).
 2. **Select your file** or drag and drop it into the upload area.
-3. The system will attempt to **auto-map columns** based on the headers in your file.
+3. The system will attempt to **auto-map columns** based on the headers in your file. If a row names an account that does not exist yet, the importer can create it.
 4. Review the mapping. You can manually assign columns to the following fields:
    - **Date**: Transaction date.
    - **Payee**: Merchant or description.
@@ -68,7 +68,7 @@ You can export your data for backup purposes or for further analysis in other to
 - **JSON (`.json`)**: Best for full backups and interoperability.
 - **CSV (`.csv`)**: Best for importing into spreadsheet software like Google Sheets or Excel.
 - **Excel (`.xlsx`)**: Generates a native Excel file with multiple sheets.
-- **PDF (`.pdf`)**: Generates a formatted report of your transactions and accounts.
+- **PDF (`.pdf`)**: A formatted report for a start and end date you choose.
 
 ### Export Details
 
@@ -87,4 +87,4 @@ The Excel export creates a specific `.xlsx` file containing two sheets:
 2. **Accounts**: A list of your account definitions.
 
 #### PDF Export
-The PDF export generates a formatted, print-ready report of your data, providing a clean overview of your accounts and transactions.
+The PDF export generates a formatted, print-ready report for the date range you choose.
