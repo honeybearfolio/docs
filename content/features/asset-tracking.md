@@ -4,7 +4,7 @@ weight: 50
 description: "Track real-world assets with valuation history and currency-aware net worth reporting."
 ---
 
-HoneyBear Folio can track assets that do not live in a brokerage or cash account. The feature appears in the sidebar as **Asset Tracker** and is designed for manual inventory and valuation history.
+HoneyBear Folio can track assets that do not live in a brokerage or cash account. The feature appears in the sidebar as **Assets**. Debts such as mortgages and loans belong under [Liabilities](../liabilities/).
 
 ## What You Can Track
 
@@ -21,7 +21,7 @@ This makes it suitable for assets such as a home, car, watch collection, artwork
 
 ## Adding an Asset
 
-1. Open **Asset Tracker** from the sidebar.
+1. Open **Assets** from the sidebar.
 2. Click **Add Asset**.
 3. Enter a name.
 4. Choose a category.

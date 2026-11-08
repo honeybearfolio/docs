@@ -4,7 +4,7 @@ weight: 30
 description: "Automate recurring income, bills, and investments."
 ---
 
-Scheduled Transactions help you stay on top of your finances by automating recurring events over time. This feature lets you define future and repeating transactions, ensuring they appear in your ledgers before or exactly when they happen.
+Scheduled transactions let you define future and repeating cash or investment entries. They stay pending until you apply them. They do not post on their own.
 
 ## Creating a Scheduled Transaction
 

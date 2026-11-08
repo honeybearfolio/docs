@@ -20,15 +20,23 @@ Thank you for your interest in contributing to HoneyBear Folio! We welcome bug r
 
 ### Prerequisites
 
-- **[Bun](https://bun.sh/) v1.3.6+** (JavaScript runtime)
-- **[Rust](https://www.rust-lang.org/) toolchain** (stable)
-- **Tauri system dependencies** (WebView/build tools). See [Tauri Prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites).
+- **[Bun](https://bun.sh/) 1.3.6 or newer**
+- A stable **[Rust](https://rustup.rs)** toolchain
+- **Tauri system libraries** for your OS. See [Tauri Prerequisites](https://tauri.app/start/prerequisites/).
 
-### Linux Dependencies (Ubuntu/Debian)
+### Linux dependencies
+
+Ubuntu or Debian:
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf build-essential curl wget file libssl-dev
+```
+
+Fedora:
+
+```bash
+sudo dnf install webkit2gtk4.1-devel libappindicator-gtk3-devel librsvg2-devel openssl-devel curl wget file patchelf gcc pkg-config
 ```
 
 ### 1. Clone & Install
@@ -59,55 +67,33 @@ bun run tauri build
 
 The output will be in `src-tauri/target/release/bundle/`.
 
-## Testing
+## Testing and checks
 
-Please ensure tests pass before submitting a PR.
+Run these from `app/` before submitting a PR:
 
-### Frontend Tests
+| Command | Purpose |
+| --- | --- |
+| `bun test` | Run the Vitest suite |
+| `bun run coverage` | Run tests and fail under 80% line coverage |
+| `bun run lint` | ESLint, with zero warnings allowed |
+| `bun run typecheck` | TypeScript check (`tsc --noEmit`) |
+| `bun run version:sync` | Copy the version from `package.json` into the Tauri config and `Cargo.toml` |
 
-We use Vitest for React components and logic.
-
-```bash
-bun run test
-# OR to check coverage
-bun run coverage
-```
-
-### Backend Tests
-
-Rust unit and integration tests.
+Rust checks, from `app/src-tauri`:
 
 ```bash
-cd src-tauri
 cargo test
+cargo fmt
+cargo clippy
 ```
 
-## Code Quality
+## Project layout
 
-### Formatting & Linting
+- `app/` — React, Vite, and the Tauri shell
+- `app/src/features/` — screens for the dashboard, accounts, investments, assets, liabilities, FIRE, rules, scheduled transactions, the assistant, and settings
+- `app/src/components/` — shared UI
+- `app/src/api/tauri-client.ts` — typed calls into Rust
+- `app/src/stores/` — client-side UI state
+- `app/src-tauri/src/core/` — commands, SQLite, market data, import and export, and PDF reports
 
-**Frontend**:
-```bash
-bun run format  # Prettier
-bun run lint    # ESLint
-```
-
-**Backend**:
-```bash
-cd src-tauri
-cargo fmt       # Rustfmt
-cargo clippy    # Linter
-```
-
-## Project Structure
-
-The project assumes a structure where the main application code resides in `app/`.
-
-- **`app/src/`**: React application source.
-  - **`components/`**: Reusable UI components.
-  - **`features/`**: Feature-specific logic and views.
-  - **`hooks/`**: Custom React hooks.
-  - **`utils/`**: Helper functions.
-- **`app/src-tauri/`**: Rust backend source.
-  - **`src/`**: Rust source code (commands, database logic, market data).
-  - **`migrations/`**: Database migrations (if applicable).
+For error-handling conventions and the pull request checklist, see `CONTRIBUTING.md` in the application repository.
