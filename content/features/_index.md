@@ -9,6 +9,7 @@ HoneyBear Folio keeps accounts, investments, assets, and debts in one local data
 ## Guides
 
 - [Dashboard](dashboard/): Arrange the cards, and give any card its own date range and filters.
+- [Budgeting](budgeting/): Set monthly category limits and track your spending.
 - [Goals](goals/): Track a target funded by accounts and investments.
 - [Import & Export](import-export/): Bring in CSV, Excel, or JSON, and send data back out, including a PDF report for a period you choose.
 - [Rules](rules/): Match a payee by text or by regular expression and fill in the category, account, notes, tags, and any other field you choose. Rules run while you type a transaction and again during import.
